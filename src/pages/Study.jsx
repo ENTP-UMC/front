@@ -9,9 +9,9 @@ export default function Study() {
   const [sortBy, setSortBy] = useState("latest"); // 최신순 기본값으로 설정
 
   const tagContents = [
-    ["태그1", "태그2", "태그3"],
-    ["태그4", "태그5", "태그6"],
-    ["태그7", "태그8", "태그9"],
+    ["기획", "프론트", "백", "디자인"],
+    ["Web", "iOS", "Android"],
+    ["SpringBoot", "Node.js"],
     // ... 다른 태그들에 해당하는 배열
   ];
 
@@ -19,35 +19,29 @@ export default function Study() {
     {
       id: 1,
       nickname: "닉네임",
-      title: "글 1",
+      title: "웹개발 취준생을 위한 포트폴리오 스터디 모집",
       date: "2022-01-01",
-      stack: "모집 파트 : IOS, 서버(Spring)",
-      period: "예상 기간 : 3개월",
-      process: "진행 방식 : 오프라인",
+      people: "모집 인원 : 5명 이상",
       scrapCount: 10,
-      tag: ["태그1", "태그2", "태그3"],
+      tag: ["프론트엔드", "JavaScript"],
     },
     {
       id: 2,
       nickname: "닉네임",
-      title: "글 2",
+      title: "웹개발 취준생을 위한 포트폴리오 스터디 모집",
       date: "2022-01-05",
-      stack: "모집 파트 : IOS, 서버(Spring)",
-      period: "예상 기간 : 3개월",
-      process: "진행 방식 : 온라인",
+      people: "모집 인원 : 5명 이상",
       scrapCount: 5,
-      tag: ["태그1", "태그2", "태그3"],
+      tag: ["프론트엔드", "JavaScript"],
     },
     {
       id: 3,
       nickname: "닉네임",
-      title: "글 3",
+      title: "웹개발 취준생을 위한 포트폴리오 스터디 모집",
       date: "2022-01-03",
-      stack: "모집 파트 : IOS, 서버(Spring)",
-      period: "예상 기간 : 3개월",
-      process: "진행 방식 : 온라인",
+      people: "모집 인원 : 5명 이상",
       scrapCount: 15,
-      tag: ["태그1", "태그2", "태그3"],
+      tag: ["프론트엔드", "JavaScript"],
     },
     // ... 다른 글들
   ];
@@ -144,6 +138,7 @@ export default function Study() {
       <div className="study-list">
         {sortedPosts().map((post) => (
           <Link
+            to={`/study4`}
             className="study-list__item"
             key={post.id}
             style={{ textDecoration: "none" }}
@@ -162,9 +157,7 @@ export default function Study() {
               <span>{post.title}</span>
             </div>
 
-            <div className="item-stack">{post.stack}</div>
-
-            <div className="item-period">{post.period}</div>
+            <div className="item-people">{post.people}</div>
 
             <div className="item-process">{post.process}</div>
 
