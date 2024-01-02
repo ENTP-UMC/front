@@ -45,5 +45,4 @@ const Background = styled.div`
   display: flex;
   flex-direction: column;
   background-color: white;
-  padding-top: 4.3125rem;
 `;
