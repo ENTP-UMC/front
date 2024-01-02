@@ -23,6 +23,31 @@ const NotSelectedTabText = styled.div`
   word-wrap: break-word
 `;
 
+const OuterTagContainer = styled.div`
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: start;
+`;
+
+const TagContainer = styled.div`
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  padding: 3px 10px;
+  margin: 20px;
+  border-radius: 10px;
+  border: 1px solid black;
+  gap: 6px;
+`;
+
+const TagText = styled.div`
+  color: black;
+  font-size: 12px;
+  font-family: 'Pretendard-Regular';
+  font-weight: 500;
+  word-wrap: break-word;
+`
+
 
 export default function Thunder() {
   let [tab, setTab] = useState(0);
@@ -30,7 +55,9 @@ export default function Thunder() {
   return (
     <ThunderContainer>
       <Header />
+
       <h2 style={{color: 'black', fontSize: 25, fontFamily: 'Inter', fontWeight: '600', wordWrap: 'break-word', padding: 17}}>UMC 스몰팟</h2>
+
       <Nav variant="tabs"  defaultActiveKey="link0">
         <Nav.Item style={{flex: 1}}>
           <Nav.Link onClick={()=>{setTab(0)}} eventKey="link0" style={{textAlign: 'center'}}>
@@ -43,7 +70,21 @@ export default function Thunder() {
           </Nav.Link>
         </Nav.Item>
       </Nav>
-      {[<div>내용0</div>, <div>내용1</div>][tab]}
+      {[<div>
+        {/* <OuterTagContainer>
+          {travelData.map((data, index) => 
+            <TagContainer key={index}>
+              <TagText>{data}</TagText>
+            </TagContainer>
+          )}
+        </OuterTagContainer> */}
+        <OuterTagContainer>
+          <TagContainer><TagText>여행1</TagText></TagContainer>
+          <TagContainer><TagText>여행2</TagText></TagContainer>
+        </OuterTagContainer>
+          </div>, <div>내용1</div>][tab]}
+
+      
     </ThunderContainer>
   );
 }
