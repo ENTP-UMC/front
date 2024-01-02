@@ -27,6 +27,7 @@ const OuterTagContainer = styled.div`
   display: flex;
   flex-wrap: wrap;
   justify-content: start;
+  margin: 19px 18px;
 `;
 
 const TagContainer = styled.div`
@@ -34,7 +35,7 @@ const TagContainer = styled.div`
   justify-content: center;
   align-items: center;
   padding: 3px 10px;
-  margin: 20px;
+  margin: 4px 3px;
   border-radius: 10px;
   border: 1px solid black;
   gap: 6px;
@@ -73,17 +74,14 @@ export default function Thunder() {
         </Nav.Item>
       </Nav>
       {[<div>
-        {/* <OuterTagContainer>
-          {travelData.map((data, index) => 
+        <OuterTagContainer>
+          {ClubData.map((data, index) =>
             <TagContainer key={index}>
               <TagText>{data}</TagText>
             </TagContainer>
           )}
-        </OuterTagContainer> */}
-        <OuterTagContainer>
-          <TagContainer><TagText>여행1</TagText></TagContainer>
-          <TagContainer><TagText>여행2</TagText></TagContainer>
         </OuterTagContainer>
+
           </div>, <div>내용1</div>][tab]}
 
       

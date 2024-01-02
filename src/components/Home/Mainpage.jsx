@@ -4,20 +4,31 @@ import icon1 from "../../assets/img/mainpage1.png";
 import icon2 from "../../assets/img/mainpage2.png";
 import icon3 from "../../assets/img/mainpage3.png";
 import search from "../../assets/img/search.png";
+import { useNavigate } from "react-router-dom";
 
 export default function Mainpage() {
+  const navigate = useNavigate();
+  const handleProject = () => {
+    navigate("/sideproject");
+  };
+  const handleStudy = () => {
+    navigate("/study");
+  };
+  const handleThunder = () => {
+    navigate("/thunder");
+  };
   return (
     <div>
       <Navigate>
-        <IconWrap>
+        <IconWrap onClick={handleProject}>
           <Icon src={icon1} />
           <IconText>프로젝트</IconText>
         </IconWrap>
-        <IconWrap>
+        <IconWrap onClick={handleStudy}>
           <Icon src={icon2} />
           <IconText>스터디</IconText>
         </IconWrap>
-        <IconWrap>
+        <IconWrap onClick={handleThunder}>
           <Icon src={icon3} />
           <IconText>소모임</IconText>
         </IconWrap>
@@ -194,7 +205,7 @@ const Navigate = styled.div`
   background-color: black;
   justify-content: space-around;
   align-items: center;
-  font-family: "Pretendard";
+  font-family: "Pretendard-Regular";
 `;
 
 const Bottom = styled.div`
@@ -212,6 +223,7 @@ const IconWrap = styled.div`
 const Icon = styled.img`
   display: flex;
   margin: 10px;
+  max-width: 40%;
 `;
 const IconText = styled.div`
   display: flex;
@@ -227,7 +239,7 @@ const Search = styled.input`
   outline: none;
   width: 80vw;
   height: 5vh;
-  font-family: "Pretendard";
+  font-family: "Pretendard-Regular";
   font-size: 16px;
   text-align: center;
   margin: 10px;
@@ -236,7 +248,7 @@ const SearchImg = styled.img`
   display: flex;
   position: absolute;
   left: 50px;
-  margin-top: 8px;
+  margin-top: 2px;
 `;
 const HotContainer = styled.div`
   display: flex;
@@ -248,7 +260,7 @@ const HotContainer = styled.div`
 
 const Title = styled.div`
   display: flex;
-  font-family: "Pretendard";
+  font-family: "Pretendard-Regular";
   font-size: 20px;
   font-weight: 700;
   margin: 5px;
@@ -264,7 +276,7 @@ const Study = styled.div`
   margin: 10px;
   border-radius: 15px;
   flex-direction: column;
-  font-family: "Pretendard";
+  font-family: "Pretendard-Regular";
 `;
 const Status = styled.div`
   display: flex;
