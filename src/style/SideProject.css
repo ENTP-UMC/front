@@ -232,3 +232,9 @@
   margin-left: 0.15rem;
   align-items: center;
 }
+
+.post {
+  position: fixed;
+  bottom: 0.62rem; /* 바닥으로부터의 여백 */
+  right: 0.62rem; /* 오른쪽으로부터의 여백 */
+}
