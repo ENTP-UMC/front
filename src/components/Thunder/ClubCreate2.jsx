@@ -1,4 +1,4 @@
-import React from 'react';
+import React from "react";
 import styled from "styled-components";
 import Header from "../Header/Header.jsx";
 import goBack from "../../assets/img/goback.png";
@@ -9,15 +9,17 @@ const ClubCreate2Container = styled.div`
 `;
 
 export default function ClubCreate2() {
+  const navigate = useNavigate();
 
-    const navigate = useNavigate();
-
-    return (
-        <ClubCreate2Container>
-                <Header />
-                <button onClick={()=>navigate(-1)} style={{ border: 'none', padding: 12, background: 'none' }}>
-                    <img src={goBack} alt="goBack"/>
-                </button>
-        </ClubCreate2Container>
-    )
+  return (
+    <ClubCreate2Container>
+      <Header />
+      <button
+        onClick={() => navigate(-1)}
+        style={{ border: "none", padding: 12, background: "none" }}
+      >
+        <img src={goBack} alt="goBack" />
+      </button>
+    </ClubCreate2Container>
+  );
 }
