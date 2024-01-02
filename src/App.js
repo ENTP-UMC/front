@@ -67,7 +67,7 @@ export default App;
 
 const BackgroundWrap = styled.div`
   height: calc(var(--vh, 1vh) * 100);
-  background: linear-gradient(180deg, #ffd25d 0%, #ff984b 100%);
+  background: black;
 `;
 //Background : 모바일로 보이는 영역
 const Background = styled.div`

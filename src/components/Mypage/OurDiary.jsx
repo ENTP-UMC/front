@@ -4,9 +4,13 @@ import styled from "styled-components";
 import feed from "../../assets/img/피드.png";
 import profile from "../../assets/img/profile.png";
 import crown from "../../assets/img/왕관.png";
+import { useLocation } from "react-router-dom";
 
 export default function OurDiary() {
   const navigate = useNavigate();
+  const location = useLocation();
+  const TitleText = location.state.title;
+  const Des = location.state.des;
   const [activeButton, setActiveButton] = useState("button1");
 
   const handleButtonClick = (buttonId) => {
@@ -16,8 +20,8 @@ export default function OurDiary() {
   return (
     <div>
       <Header>
-        <Title>Our 다이어리</Title>
-        <Title2>공유 일기장 사이드 프로젝트</Title2>
+        <Title>{TitleText}</Title>
+        <Title2>{Des}</Title2>
         <ButtonWrap>
           <Stack>iOS</Stack>
           <Stack>Node.js</Stack>

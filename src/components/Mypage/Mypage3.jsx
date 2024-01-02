@@ -17,6 +17,12 @@ export default function Mypage3() {
   const handlenavigate3 = () => {
     navigate("/mypage/3");
   };
+  const handlenavigateSIde = () => {
+    navigate("/step4");
+  };
+  const handleStudy = () => {
+    navigate("/study4");
+  };
 
   const [activeButton, setActiveButton] = useState("button1");
 
@@ -34,7 +40,7 @@ export default function Mypage3() {
           <Text1>인유</Text1>
           <Text2>010-1234-5678</Text2>
         </TextWrap>
-        <Edit>프로필 수정</Edit>
+        <Edit></Edit>
       </Header>
       <TabWrap>
         <Tab1 onClick={handlenavigate1}>나의 IN</Tab1>
@@ -64,23 +70,23 @@ export default function Mypage3() {
       <Content>
         {activeButton === "button1" && (
           <div>
-            <Post src={post1} />
-            <Post src={post1} />
-            <Post src={post1} />
-            <Post src={post1} />
+            <Post onClick={handlenavigateSIde} src={post1} />
+            <Post onClick={handlenavigateSIde} src={post1} />
+            <Post onClick={handlenavigateSIde} src={post1} />
+            <Post onClick={handlenavigateSIde} src={post1} />
           </div>
         )}
 
         {activeButton === "button2" && (
           <div>
-            <Post src={post1} />
+            <Post onClick={handleStudy} src={post1} />
           </div>
         )}
         {activeButton === "button3" && (
           <div>
-            <Post src={post1} />
+            <Post onClick={handleStudy} src={post1} />
 
-            <Post src={post1} />
+            <Post onClick={handleStudy} src={post1} />
           </div>
         )}
       </Content>
@@ -122,16 +128,12 @@ const Text2 = styled.div`
 `;
 const Edit = styled.div`
   border-radius: 30px;
-  border: 1px solid #595959;
+
   width: 30vw;
   justify-content: center;
   align-items: center;
   display: flex;
   height: 40%;
-  &:hover {
-    background-color: black;
-    color: white;
-  }
 `;
 
 const TabWrap = styled.div`

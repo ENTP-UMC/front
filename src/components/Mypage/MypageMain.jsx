@@ -16,7 +16,39 @@ export default function MypageMain() {
     navigate("/mypage/3");
   };
   const handlediary = () => {
-    navigate("/diary");
+    navigate("/diary", {
+      state: { title: "Our 다이어리", des: "공유 일기장 사이드 프로젝트" },
+    });
+  };
+
+  const handlediary2 = () => {
+    navigate("/diary", {
+      state: { title: "Look Book", des: "패션 커뮤니티 사이드 프로젝트" },
+    });
+  };
+
+  const handlediary3 = () => {
+    navigate("/diary", {
+      state: {
+        title: "웹 포트폴리오 ",
+        des: "웹 개발 포트폴리오  스터디",
+      },
+    });
+  };
+  const handlediary4 = () => {
+    navigate("/diary", {
+      state: { title: "정보처리기사", des: "정보 처리기사 스터디" },
+    });
+  };
+  const handlediary5 = () => {
+    navigate("/diary", {
+      state: { title: "클라이밍", des: "클라이밍 소모임" },
+    });
+  };
+  const handlediary6 = () => {
+    navigate("/diary", {
+      state: { title: "배드민턴", des: "배드민턴 소모임" },
+    });
   };
   return (
     <div>
@@ -26,7 +58,7 @@ export default function MypageMain() {
           <Text1>인유</Text1>
           <Text2>010-1234-5678</Text2>
         </TextWrap>
-        <Edit>프로필 수정</Edit>
+        <Edit></Edit>
       </Header>
       <TabWrap>
         <Tab1 onClick={handlenavigate1}>나의 IN</Tab1>
@@ -46,6 +78,7 @@ export default function MypageMain() {
             </StudyText2>
           </Study>
           <Study
+            onClick={handlediary2}
             style={{
               backgroundColor: "black",
             }}
@@ -74,6 +107,7 @@ export default function MypageMain() {
         <Title>스터디</Title>
         <StudyContainer>
           <Study
+            onClick={handlediary3}
             style={{
               backgroundColor: "black",
             }}
@@ -89,7 +123,7 @@ export default function MypageMain() {
             </StudyText1>
           </Study>
           <Study>
-            <StudyText1>정보처리기사 스터디</StudyText1>
+            <StudyText1 onClick={handlediary4}>정보처리기사 스터디</StudyText1>
           </Study>
         </StudyContainer>
       </HotContainer>
@@ -97,15 +131,11 @@ export default function MypageMain() {
       <HotContainer>
         <Title>소모임</Title>
         <StudyContainer>
-          <Study>
-            <StudyText1>Our 다이어리</StudyText1>
-            <StudyText2>
-              공유 일기장
-              <bn />
-              사이드 프로젝트
-            </StudyText2>
+          <Study onClick={handlediary5}>
+            <StudyText1>클라이밍</StudyText1>
           </Study>
           <Study
+            onClick={handlediary6}
             style={{
               backgroundColor: "black",
             }}
@@ -115,17 +145,8 @@ export default function MypageMain() {
                 color: "white",
               }}
             >
-              Look Book
+              배드민턴
             </StudyText1>
-            <StudyText2
-              style={{
-                color: "white",
-              }}
-            >
-              패션 커뮤니티
-              <bn />
-              사이드 프로젝트
-            </StudyText2>
           </Study>
         </StudyContainer>
       </HotContainer>
@@ -164,16 +185,12 @@ const Text2 = styled.div`
 `;
 const Edit = styled.div`
   border-radius: 30px;
-  border: 1px solid #595959;
+
   width: 30vw;
   justify-content: center;
   align-items: center;
   display: flex;
   height: 40%;
-  &:hover {
-    background-color: black;
-    color: white;
-  }
 `;
 
 const TabWrap = styled.div`
