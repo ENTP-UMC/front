@@ -51,6 +51,47 @@ const TagText = styled.div`
 
 const ClubData = ['여행', '동네친구', '반려동물', '봉사활동', '음식', '운동', '코딩', '음악', '문화/예술', '게임'];
 
+const ClubItemBlack = styled.div`
+  width: 170px;
+  height: 170px;
+  margin: 9px;
+  background-color: black;
+  border-radius: 6.18px;
+  position: relative;
+`;
+
+const ClubItemGreen = styled.div`
+  width: 170px;
+  height: 170px;
+  margin: 9px;
+  background-color: #02FF70;
+  border-radius: 6.18px;
+  position: relative;
+`;
+
+const ClubItemBlock = styled.div`
+  padding: 2px 17px;
+  display: flex;
+`;
+
+const ClubItemTextWhite = styled.div`
+  color: white;
+  font-size: 20;
+  font-family: 'Pretendard-Regular';
+  font-weight: 700;
+  line-height: 20;
+  word-wrap: break-word;
+`
+
+const ClubItemTextBlack = styled.div`
+  color: black;
+  font-size: 20;
+  font-family: 'Pretendard-Regular';
+  font-weight: 700;
+  line-height: 20;
+  word-wrap: break-word;
+`
+
 
 export default function Thunder() {
   let [tab, setTab] = useState(0);
@@ -81,9 +122,22 @@ export default function Thunder() {
             </TagContainer>
           )}
         </OuterTagContainer>
-
-          </div>, <div>내용1</div>][tab]}
-
+        <ClubItemBlock>
+            <ClubItemBlack><ClubItemTextWhite>클라이밍</ClubItemTextWhite></ClubItemBlack>
+            <ClubItemGreen><ClubItemTextBlack>배드민턴</ClubItemTextBlack></ClubItemGreen>
+          </ClubItemBlock>
+          <ClubItemBlock>
+            <ClubItemGreen><ClubItemTextBlack>클라이밍</ClubItemTextBlack></ClubItemGreen>
+            <ClubItemBlack><ClubItemTextWhite>배드민턴</ClubItemTextWhite></ClubItemBlack>
+          </ClubItemBlock>
+          <ClubItemBlock>
+            <ClubItemBlack><ClubItemTextWhite>클라이밍</ClubItemTextWhite></ClubItemBlack>
+            <ClubItemGreen><ClubItemTextBlack>배드민턴</ClubItemTextBlack></ClubItemGreen>
+          </ClubItemBlock>
+          </div>, 
+          <div>
+            내용2
+          </div>][tab]}
       
     </ThunderContainer>
   );
