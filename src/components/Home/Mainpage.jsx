@@ -19,7 +19,15 @@ export default function Mainpage() {
   const handleThunder = () => {
     navigate("/thunder");
   };
-
+  const handleStep4 = () => {
+    navigate("/step4");
+  };
+  const handleStudy4 = () => {
+    navigate("/study4");
+  };
+  const handleNext = () => {
+    navigate("/ClubCreate2");
+  };
   const handleKeyDown = (event) => {
     if (event.key === "Enter") {
       setInputTrue(true);
@@ -60,7 +68,7 @@ export default function Mainpage() {
           <SearchText>"{inputValue}" </SearchText>
           {inputTrue && (
             <StudyContainer>
-              <Study>
+              <Study onClick={handleStudy4}>
                 <Status>모집중</Status>
                 <StudyText1>
                   정보 처리 기사 스터디
@@ -75,6 +83,7 @@ export default function Mainpage() {
                 </StudyText2>
               </Study>
               <Study
+                onClick={handleStudy4}
                 style={{
                   backgroundColor: "black",
                 }}
@@ -115,7 +124,7 @@ export default function Mainpage() {
           <HotContainer>
             <Title>지금 HOT한 스터디 🔥</Title>
             <StudyContainer>
-              <Study>
+              <Study onClick={handleStudy4}>
                 <Status>모집중</Status>
                 <StudyText1>
                   정보 처리 기사 스터디
@@ -130,6 +139,7 @@ export default function Mainpage() {
                 </StudyText2>
               </Study>
               <Study
+                onClick={handleStudy4}
                 style={{
                   backgroundColor: "black",
                 }}
@@ -168,6 +178,7 @@ export default function Mainpage() {
             <Title>지금 HOT한 프로젝트 🔥</Title>
             <StudyContainer>
               <Study
+                onClick={handleStep4}
                 style={{
                   backgroundColor: "black",
                 }}
@@ -201,7 +212,7 @@ export default function Mainpage() {
                   예상 기간 : 3개월
                 </StudyText2>
               </Study>
-              <Study>
+              <Study onClick={handleStep4}>
                 <Status>모집중</Status>
                 <StudyText1>
                   패션 커뮤니티
@@ -224,7 +235,7 @@ export default function Mainpage() {
               <Study>
                 <Status>모집중</Status>
                 <StudyText1>
-                  정보 처리 기사 스터디
+                  클라이밍 소모임
                   <bn />
                   모집합니다
                 </StudyText1>
@@ -253,7 +264,7 @@ export default function Mainpage() {
                     color: "white",
                   }}
                 >
-                  정보 처리 기사 스터디
+                  수영 소모임
                   <bn />
                   모집합니다
                 </StudyText1>
