@@ -3,7 +3,8 @@ import styled from "styled-components";
 import Header from "../components/Header/Header";
 import { Nav } from 'react-bootstrap';
 import myImage from '../assets/img/thunderblock.png';
-
+import { useNavigate } from 'react-router-dom';
+import ClubCreate from '../components/Thunder/ClubCreate.jsx';
 
 const ClubData = ['여행', '동네친구', '반려동물', '봉사활동', '음식', '운동', '코딩', '음악', '문화/예술', '게임'];
 
@@ -119,6 +120,7 @@ const ClubCreateButton = styled.button`
 
 export default function Thunder() {
   let [tab, setTab] = useState(0);
+  const navigate = useNavigate();
 
   return (
     <ThunderContainer>
@@ -159,7 +161,7 @@ export default function Thunder() {
             <ClubItemGreen><ClubItemTextBlack>배드민턴</ClubItemTextBlack></ClubItemGreen>
           </ClubItemBlock>
 
-          <ClubCreateButton>모임 만들기</ClubCreateButton>
+          <ClubCreateButton onClick={()=> navigate('/ClubCreate')}>모임 만들기</ClubCreateButton>
           </div>, 
           <div>
             <img src={myImage} style={{padding:11}} alt="myImage" />
