@@ -165,7 +165,7 @@ export default function ClubCreate() {
 
       <div style={{ display: "flex", justifyContent: "center" }}>
         <button
-          onClick={() => navigate("/ClubCreate2")}
+          onClick={() => navigate("/step4")}
           style={{
             width: "372px",
             height: "41px",
