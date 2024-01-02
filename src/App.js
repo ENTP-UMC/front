@@ -13,6 +13,7 @@ import LoginStep1 from "./components/Login/LoginStep1";
 import LoginStep2 from "./components/Login/LoginStep2";
 import LoginStep3 from "./components/Login/LoginStep3";
 import LoginStep4 from "./components/Login/LoginStep4";
+import ClubCreate from "./components/Thunder/ClubCreate";
 
 function App() {
   return (
@@ -31,6 +32,7 @@ function App() {
               <Route path="/sideproject" element={<SideProject />} />
               <Route path="/study" element={<Study />} />
               <Route path="/thunder" element={<Thunder />} />
+              <Route path="/ClubCreate" component={<ClubCreate />} />
             </Routes>
           </BrowserRouter>
         </Background>
