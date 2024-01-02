@@ -8,17 +8,22 @@ import { useNavigate } from "react-router-dom";
 
 export default function LoginMain() {
   const navigate = useNavigate();
-  const handleKakao = () => {
-    navigate("/login/1");
-  };
 
+  const K_REST_API_KEY = process.env.REACT_APP_K_REST_API_KEY;
+  const K_REDIRECT_URI = `http://localhost:3000/oauth`;
+  const kakaoURL = `https://kauth.kakao.com/oauth/authorize?client_id=${K_REST_API_KEY}&redirect_uri=${K_REDIRECT_URI}&response_type=code`;
+
+  const handleKakaoLogin = () => {
+    console.log(K_REST_API_KEY);
+    window.location.href = kakaoURL;
+  };
   return (
     <Div>
       <Logo>
         <Img src={loginimg} />
       </Logo>
       <SocialLogin>
-        <Login22 src={kakao} />
+        <Login22 onClick={handleKakaoLogin} src={kakao} />
         <Login22 src={google} />
         <Login22 src={apple} />
       </SocialLogin>
