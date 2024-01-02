@@ -15,6 +15,7 @@ import LoginStep3 from "./components/Login/LoginStep3";
 import LoginStep4 from "./components/Login/LoginStep4";
 import Mypage2 from "./components/Mypage/Mypage2";
 import Mypage3 from "./components/Mypage/Mypage3";
+import Diary from "./pages/Diary";
 
 function App() {
   return (
@@ -32,6 +33,7 @@ function App() {
               <Route path="/mypage" element={<Mypage />} />
               <Route path="/mypage/2" element={<Mypage2 />} />
               <Route path="/mypage/3" element={<Mypage3 />} />
+              <Route path="/diary" element={<Diary />} />
 
               <Route path="/sideproject" element={<SideProject />} />
               <Route path="/study" element={<Study />} />
