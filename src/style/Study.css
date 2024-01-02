@@ -1,4 +1,4 @@
-.sideProject {
+.study {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -7,7 +7,7 @@
   padding-top: 4.3125rem;
 }
 
-.sideProject__tag {
+.study__tag {
   display: flex;
   width: 22.625rem;
   height: fit-content;
@@ -120,7 +120,7 @@
   border: none;
 }
 
-.sideProject-list__item {
+.study-list__item {
   display: flex;
   width: 22.625rem;
   height: fit-content;
@@ -158,17 +158,9 @@
   margin-bottom: 0.12rem;
 }
 
-.item-stack {
-  color: #000;
-  font-family: Anek Latin;
-  font-size: 0.9375rem;
-  font-style: normal;
-  font-weight: 400;
-  line-height: 1.3125rem; /* 140% */
-  letter-spacing: -0.05625rem;
-}
-
-.item-period {
+.item-stack,
+.item-period,
+.item-process {
   color: #000;
   font-family: Anek Latin;
   font-size: 0.9375rem;
