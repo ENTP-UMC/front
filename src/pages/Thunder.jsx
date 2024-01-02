@@ -48,6 +48,8 @@ const TagText = styled.div`
   word-wrap: break-word;
 `
 
+const ClubData = ['여행', '동네친구', '반려동물', '봉사활동', '음식', '운동', '코딩', '음악', '문화/예술', '게임'];
+
 
 export default function Thunder() {
   let [tab, setTab] = useState(0);
