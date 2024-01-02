@@ -30,19 +30,21 @@ export default function Thunder() {
   return (
     <ThunderContainer>
       <Header />
-      <h1>Thunder</h1>
-      <h2 style={{color: 'black', fontSize: 25, fontFamily: 'Inter', fontWeight: '600', wordWrap: 'break-word'}}>UMC 스몰팟</h2>
+      <h2 style={{color: 'black', fontSize: 25, fontFamily: 'Inter', fontWeight: '600', wordWrap: 'break-word', padding: 17}}>UMC 스몰팟</h2>
       <Nav variant="tabs"  defaultActiveKey="link0">
-        <SelectedTabText selected={tab === 0}>
-          <Nav.Link onClick={()=>{setTab(0)}} eventKey="link0">Long-term</Nav.Link>
-        </SelectedTabText>
-        <NotSelectedTabText selected={tab === 1}>
-          <Nav.Link onClick={()=>{setTab(1)}} eventKey="link1">Thunder⚡</Nav.Link>
-        </NotSelectedTabText>
+        <Nav.Item style={{flex: 1}}>
+          <Nav.Link onClick={()=>{setTab(0)}} eventKey="link0" style={{textAlign: 'center'}}>
+            {tab === 0 ? <SelectedTabText>소모임</SelectedTabText> : <NotSelectedTabText>소모임</NotSelectedTabText>}
+          </Nav.Link>
+        </Nav.Item>
+        <Nav.Item style={{flex: 1}}>
+          <Nav.Link onClick={()=>{setTab(1)}} eventKey="link1" style={{textAlign: 'center'}}>
+            {tab === 1 ? <SelectedTabText>Thunder⚡</SelectedTabText> : <NotSelectedTabText>Thunder⚡</NotSelectedTabText>}
+          </Nav.Link>
+        </Nav.Item>
       </Nav>
-      function TabContent({tab}){
-        [<div>내용0</div>, <div>내용1</div>][tab]
-      }
+      {[<div>내용0</div>, <div>내용1</div>][tab]}
     </ThunderContainer>
   );
 }
+
