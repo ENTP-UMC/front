@@ -27,8 +27,8 @@
 }
 
 .tag-symbol {
-  width: 1.5rem;
-  height: 1.5rem;
+  width: 1.125rem;
+  height: 1rem;
   flex-shrink: 0;
   margin-right: 0.06rem;
 }
@@ -89,6 +89,19 @@
   margin-left: 2.56rem;
 }
 
+.tag-content-item {
+  color: #000;
+  font-family: Arial;
+  font-size: 0.6875rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  padding: 0.25rem 0.19rem;
+  border-radius: 0.3125rem;
+  background: #d9d9d9;
+  margin-right: 0.75rem;
+}
+
 .filter {
   display: flex;
   margin-top: 1.81rem;
@@ -105,4 +118,117 @@
 
 .sortDropdown {
   border: none;
+}
+
+.sideProject-list__item {
+  display: flex;
+  width: 20.625rem;
+  height: fit-content;
+  flex-shrink: 0;
+  border-radius: 0.1875rem;
+  border: 1px solid #dfdfdf;
+  background: #fff;
+  margin-bottom: 0.81rem;
+  padding: 0.81rem 0.69rem;
+  flex-direction: column;
+  margin-top: 0.31rem;
+}
+
+.item-writer {
+  display: flex;
+  align-items: center;
+  color: #000;
+  font-family: Arial;
+  font-size: 0.875rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 1.3125rem; /* 150% */
+  letter-spacing: -0.05625rem;
+}
+
+.item-title {
+  color: #000;
+  font-family: Arial;
+  font-size: 1.0625rem;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 1.3125rem; /* 123.529% */
+  letter-spacing: -0.05625rem;
+  margin-top: 0.62rem;
+  margin-bottom: 0.12rem;
+}
+
+.item-stack {
+  color: #000;
+  font-family: Anek Latin;
+  font-size: 0.9375rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 1.3125rem; /* 140% */
+  letter-spacing: -0.05625rem;
+}
+
+.item-period {
+  color: #000;
+  font-family: Anek Latin;
+  font-size: 0.9375rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 1.3125rem; /* 140% */
+  letter-spacing: -0.05625rem;
+}
+
+.item-etc {
+  display: flex;
+  flex-direction: row;
+  margin-top: 1.06rem;
+}
+
+.item-tag__name {
+  flex-shrink: 0;
+  border-radius: 0.3125rem;
+  background: #d9d9d9;
+  color: #000;
+  font-family: Arial;
+  font-size: 0.6875rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  padding: 0.31rem 0.44rem;
+  margin-right: 0.75rem;
+}
+
+.scrap {
+  display: flex;
+  width: fit-content;
+  margin-left: auto;
+}
+
+.scrapButton {
+  width: 1.22rem;
+  height: 1.085rem;
+  flex-shrink: 0;
+  outline: none; /* 클릭 효과를 없애기 위해 포커스 테두리 제거 */
+  border: none; /* 버튼 테두리 제거 */
+  background: transparent; /* 배경을 투명으로 설정하여 파란색 효과 제거 */
+  cursor: pointer;
+}
+
+.scrapButton:active,
+.scrapButton:focus {
+  outline: none;
+  border: none;
+  background: transparent;
+}
+
+.scrapCount {
+  display: flex;
+  color: #000;
+  font-family: Arial;
+  font-size: 0.625rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  margin-left: 0.15rem;
+  align-items: center;
 }
