@@ -18,6 +18,7 @@ import Mypage3 from "./components/Mypage/Mypage3";
 import Diary from "./pages/Diary";
 import SideProjectPost from "./pages/SideProjectPost";
 import ClubCreate from "./components/Thunder/ClubCreate";
+import ClubCreate2 from "./components/Thunder/ClubCreate2";
 
 function App() {
   return (
@@ -42,6 +43,7 @@ function App() {
               <Route path="/study" element={<Study />} />
               <Route path="/thunder" element={<Thunder />} />
               <Route path="/ClubCreate" element={<ClubCreate />} />
+              <Route path="/ClubCreate2" element={<ClubCreate2 />} />
             </Routes>
           </BrowserRouter>
         </Background>

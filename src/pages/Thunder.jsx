@@ -163,11 +163,11 @@ export default function Thunder() {
 
           <ClubCreateButton onClick={()=> navigate('/ClubCreate')}>모임 만들기</ClubCreateButton>
           </div>, 
-          <div>
-            <img src={myImage} style={{padding:11}} alt="myImage" />
-            <img src={myImage} style={{padding:11}} alt="myImage" />
-            <img src={myImage} style={{padding:11}} alt="myImage" />
-            <img src={myImage} style={{padding:11}} alt="myImage" />
+          <div style={{display:'flex', flexDirection: 'column', paddingTop: '15px', alignItems: 'flex-start'}}>
+            <img src={myImage} style={{width: "90vw", padding: '11px'}} alt="myImage" />
+            <img src={myImage} style={{width: "90vw", padding: '11px'}} alt="myImage" />
+            <img src={myImage} style={{width: "90vw", padding: '11px'}} alt="myImage" />
+            <img src={myImage} style={{width: "90vw", padding: '11px'}} alt="myImage" />
           </div>][tab]}
       
     </ThunderContainer>
