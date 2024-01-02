@@ -17,7 +17,9 @@ export default function Mypage2() {
   const handlenavigate3 = () => {
     navigate("/mypage/3");
   };
-
+  const handlenMe = () => {
+    navigate("/step4");
+  };
   return (
     <div>
       <Container />
@@ -28,19 +30,19 @@ export default function Mypage2() {
           <Text1>인유</Text1>
           <Text2>010-1234-5678</Text2>
         </TextWrap>
-        <Edit>프로필 수정</Edit>
+        <Edit></Edit>
       </Header>
       <TabWrap>
         <Tab1 onClick={handlenavigate1}>나의 IN</Tab1>
         <Tab2 onClick={handlenavigate2}>내가 쓴 글</Tab2>
         <Tab3 onClick={handlenavigate3}>스크랩</Tab3>
       </TabWrap>
-      <Post src={post1} />
-      <Post src={post1} />
-      <Post src={post1} />
-      <Post src={post1} />
-      <Post src={post1} />
-      <Post src={post1} />
+      <Post onClick={handlenMe} src={post1} />
+      <Post onClick={handlenMe} src={post1} />
+      <Post onClick={handlenMe} rc={post1} />
+      <Post onClick={handlenMe} src={post1} />
+      <Post onClick={handlenMe} src={post1} />
+      <Post onClick={handlenMe} src={post1} />
     </div>
   );
 }
@@ -79,16 +81,12 @@ const Text2 = styled.div`
 `;
 const Edit = styled.div`
   border-radius: 30px;
-  border: 1px solid #595959;
+
   width: 30vw;
   justify-content: center;
   align-items: center;
   display: flex;
   height: 40%;
-  &:hover {
-    background-color: black;
-    color: white;
-  }
 `;
 
 const TabWrap = styled.div`
