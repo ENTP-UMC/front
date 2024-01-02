@@ -2,16 +2,22 @@
   position: absolute;
   top: 0;
   height: 4.3125rem;
-  width: 100%;
+  width: 100vw;
   background-color: #000;
   display: flex;
   justify-content: space-between;
-  padding-left: 1.5rem;
-  padding-right: 1.5rem;
 }
 
 .header__logo {
   display: flex;
   margin-top: auto;
   margin-bottom: auto;
+  margin-left: 1.5rem;
+}
+
+.header__mypage {
+  display: flex;
+  margin-top: auto;
+  margin-bottom: auto;
+  margin-right: 1.5rem;
 }
