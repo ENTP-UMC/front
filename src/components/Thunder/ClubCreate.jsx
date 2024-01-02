@@ -147,7 +147,7 @@ export default function ClubCreate() {
             </InputContainer>
 
             <div style={{display: 'flex', justifyContent: 'center'}}>
-                <button onClick={()=>navigate('/ClubCreate2')} style={{width: '372px', height: '41px', background: '#02FF70', borderRadius: 10, position: 'absolute', bottom: '10px', border: 'none'}}>
+                <button style={{width: '372px', height: '41px', background: '#02FF70', borderRadius: 10, position: 'absolute', bottom: '10px', border: 'none'}}>
                     등록하기
                 </button>
             </div>
