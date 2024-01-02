@@ -1,23 +1,71 @@
 import React, { useState } from "react";
+import { Link } from "react-router-dom";
 import Header from "../components/Header/Header";
 import "../style/SideProject.css";
 import { IMAGES } from "../constants/images";
 
 export default function SideProject() {
   const [activeTab, setActiveTab] = useState(1); // 현재 활성화된 탭의 인덱스
+  const [sortBy, setSortBy] = useState("latest"); // 최신순 기본값으로 설정
+
+  const tagContents = [
+    ["태그1", "태그2", "태그3"],
+    ["태그4", "태그5", "태그6"],
+    ["태그7", "태그8", "태그9"],
+    // ... 다른 태그들에 해당하는 배열
+  ];
+
+  const posts = [
+    {
+      id: 1,
+      nickname: "닉네임",
+      title: "글 1",
+      date: "2022-01-01",
+      stack: "모집 파트 : IOS, 서버(Spring)",
+      period: "예상 기간 : 3개월",
+      scrapCount: 10,
+      tag: ["태그1", "태그2", "태그3"],
+    },
+    {
+      id: 2,
+      nickname: "닉네임",
+      title: "글 2",
+      date: "2022-01-05",
+      stack: "모집 파트 : IOS, 서버(Spring)",
+      period: "예상 기간 : 3개월",
+      scrapCount: 5,
+      tag: ["태그1", "태그2", "태그3"],
+    },
+    {
+      id: 3,
+      nickname: "닉네임",
+      title: "글 3",
+      date: "2022-01-03",
+      stack: "모집 파트 : IOS, 서버(Spring)",
+      period: "예상 기간 : 3개월",
+      scrapCount: 15,
+      tag: ["태그1", "태그2", "태그3"],
+    },
+    // ... 다른 글들
+  ];
+
+  const [scrapStates, setScrapStates] = useState(
+    posts.reduce((acc, post) => {
+      acc[post.id] = false;
+      return acc;
+    }, {})
+  );
 
   const handleTabClick = (tabIndex) => {
     setActiveTab(tabIndex);
   };
 
-  const [sortBy, setSortBy] = useState("latest"); // 최신순 기본값으로 설정
-
-  const posts = [
-    { id: 1, title: "글 1", date: "2022-01-01", scrapCount: 10 },
-    { id: 2, title: "글 2", date: "2022-01-05", scrapCount: 5 },
-    { id: 3, title: "글 3", date: "2022-01-03", scrapCount: 15 },
-    // ... 다른 글들
-  ];
+  const handleToggle = (postId) => {
+    setScrapStates((prevStates) => ({
+      ...prevStates,
+      [postId]: !prevStates[postId],
+    }));
+  };
 
   // 정렬 기준에 따라 글 목록을 동적으로 정렬하는 함수
   const sortedPosts = () => {
@@ -28,6 +76,7 @@ export default function SideProject() {
     }
     return posts;
   };
+
   return (
     <div className="sideProject">
       <Header />
@@ -65,9 +114,11 @@ export default function SideProject() {
         <div className="tag-line"></div>
 
         <div className="tag-content">
-          {activeTab === 1 && <p>탭 1의 내용</p>}
-          {activeTab === 2 && <p>탭 2의 내용</p>}
-          {activeTab === 3 && <p>탭 3의 내용</p>}
+          {tagContents[activeTab - 1].map((tag, index) => (
+            <span key={index} className="tag-content-item">
+              {tag}
+            </span>
+          ))}
         </div>
       </div>
 
@@ -87,16 +138,56 @@ export default function SideProject() {
         </select>
       </div>
 
-      <div>
-        <ul>
-          {sortedPosts().map((post) => (
-            <li key={post.id}>
+      <div className="sideProject-list">
+        {sortedPosts().map((post) => (
+          <Link
+            className="sideProject-list__item"
+            key={post.id}
+            style={{ textDecoration: "none" }}
+          >
+            <div className="item-writer">
+              <img
+                className="profile_img"
+                src={IMAGES.profile_img}
+                alt="profile_img"
+                style={{ marginRight: "0.31rem" }}
+              />
+              <span>{post.nickname}</span>
+            </div>
+
+            <div className="item-title">
               <span>{post.title}</span>
-              <span>{post.date}</span>
-              <span>스크랩 수: {post.scrapCount}</span>
-            </li>
-          ))}
-        </ul>
+            </div>
+
+            <div className="item-stack">{post.stack}</div>
+
+            <div className="item-period">{post.period}</div>
+
+            <div className="item-etc">
+              <div className="item-tag">
+                {post.tag.map((tag, index) => (
+                  <span key={index} className="item-tag__name">
+                    {tag}
+                  </span>
+                ))}
+              </div>
+
+              <div className="scrap">
+                <img
+                  className="scrapButton"
+                  src={
+                    scrapStates[post.id]
+                      ? IMAGES.scrap_after
+                      : IMAGES.scrap_before
+                  }
+                  alt="Scrap Button"
+                  onClick={() => handleToggle(post.id)}
+                />
+                <span className="scrapCount">{post.scrapCount}</span>
+              </div>
+            </div>
+          </Link>
+        ))}
       </div>
     </div>
   );
