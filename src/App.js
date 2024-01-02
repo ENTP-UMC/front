@@ -16,6 +16,8 @@ import LoginStep4 from "./components/Login/LoginStep4";
 import Mypage2 from "./components/Mypage/Mypage2";
 import Mypage3 from "./components/Mypage/Mypage3";
 import Diary from "./pages/Diary";
+import SideProjectPost from "./pages/SideProjectPost";
+import ClubCreate from "./components/Thunder/ClubCreate";
 import Step4 from "./components/SideProject/Step4";
 import Step5 from "./components/SideProject/Step5";
 import Study4 from "./components/Study/Study4";
@@ -44,8 +46,10 @@ function App() {
               <Route path="/study5" element={<Study5 />} />
 
               <Route path="/sideproject" element={<SideProject />} />
+              <Route path="/sideprojectPost" element={<SideProjectPost />} />
               <Route path="/study" element={<Study />} />
               <Route path="/thunder" element={<Thunder />} />
+              <Route path="/ClubCreate" element={<ClubCreate />} />
             </Routes>
           </BrowserRouter>
         </Background>
