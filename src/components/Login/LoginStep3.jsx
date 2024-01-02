@@ -14,22 +14,21 @@ export default function LoginStep3() {
   const Phone = useSelector((state) => state.login.phoneNum);
 
   const handleStep1Next = () => {
-    console.log(Nickname, Univ, Phone);
-
     const requestData = {
       id: 11,
       nickname: Nickname,
       school: Univ,
       phone: Phone,
     };
+    console.log(requestData);
 
     const headers = {
       "Content-Type": "application/json",
     };
 
     axios
-      .post(
-        "http://ec2-15-165-67-132.ap-northeast-2.compute.amazonaws.com/users/singin",
+      .put(
+        "http://hakerton3-env.eba-sf3fm2mf.ap-northeast-2.elasticbeanstalk.com/user/signin",
         requestData,
         { headers }
       )
