@@ -13,7 +13,13 @@ const Header = () => {
         <img src={IMAGES.logo} alt="logo" />
       </Link>
 
-      <img className="header__mypage" src={IMAGES.mypage} alt="mypage" />
+      <Link
+        to={`/mypage`}
+        style={{ textDecoration: "none" }}
+        className="header__mypage"
+      >
+        <img src={IMAGES.mypage} alt="mypage" />
+      </Link>
     </div>
   );
 };
