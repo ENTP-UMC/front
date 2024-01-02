@@ -109,7 +109,7 @@ export default function ClubCreate() {
     return (
         <ClubCreateContainer>
             <Header />
-            <button onClick={()=>navigate('/Thunder')} style={{ border: 'none', padding: 12, background: 'none' }}>
+            <button onClick={()=>navigate(-1)} style={{ border: 'none', padding: 12, background: 'none' }}>
                 <img src={goBack} alt="goBack"/>
             </button>
             <QuestionText>모임명</QuestionText>
@@ -146,9 +146,11 @@ export default function ClubCreate() {
                 <Input type="text" placeholder="오픈채팅 링크를 붙여넣어주세요." />
             </InputContainer>
 
-            <button onClick={()=>navigate('/Thunder')} style={{width: '372px', height: '41px', background: '#02FF70', borderRadius: 10, position: 'fixed', bottom: 0}}>
-                등록하기
-            </button>
+            <div style={{display: 'flex', justifyContent: 'center'}}>
+                <button onClick={()=>navigate('/ClubCreate2')} style={{width: '372px', height: '41px', background: '#02FF70', borderRadius: 10, position: 'absolute', bottom: '10px', border: 'none'}}>
+                    등록하기
+                </button>
+            </div>
 
         </ClubCreateContainer>
     )

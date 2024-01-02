@@ -219,7 +219,14 @@ export default function Thunder() {
               모임 만들기
             </ClubCreateButton>
           </div>,
-          <div>
+          <div
+            style={{
+              display: "flex",
+              flexDirection: "column",
+              paddingTop: "15px",
+              alignItems: "flex-start",
+            }}
+          >
             <Img src={myImage} alt="myImage" />
             <Img src={myImage} alt="myImage" />
             <Img src={myImage} alt="myImage" />
