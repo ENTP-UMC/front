@@ -1,0 +1,100 @@
+.sideProjectPost {
+  display: flex;
+  flex-direction: column;
+}
+
+.sideProjectPost__title {
+  color: #000;
+  font-family: Arial;
+  font-size: 0.75rem;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 1.3125rem; /* 175% */
+  letter-spacing: -0.05625rem;
+  margin-top: 0.81rem;
+  margin-left: 1.37rem;
+  margin-bottom: 0.38rem;
+}
+
+.title-input {
+  display: flex;
+  width: 22.5625rem;
+  height: 2.4235rem;
+  padding: 1rem 0.625rem;
+  justify-content: center;
+  align-items: center;
+  gap: 0.625rem;
+  flex-shrink: 0;
+  border-radius: 0.3125rem;
+  border: 1px solid var(--Sub, #d9d9d9);
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.number-input-container {
+  display: flex;
+  flex-direction: row;
+  margin-left: 1.37rem;
+  margin-right: 0.44rem;
+}
+
+.label {
+  color: #000;
+  text-align: center;
+  font-family: Figma Hand;
+  font-size: 0.75rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 1.3125rem; /* 175% */
+  letter-spacing: -0.02rem;
+}
+
+.number-input {
+  display: flex;
+  width: 2.56rem;
+  height: 1.91325rem;
+  padding: 1rem 0.625rem;
+  justify-content: center;
+  align-items: center;
+  gap: 0.625rem;
+  flex-shrink: 0;
+  border-radius: 0.3125rem;
+  border: 1px solid var(--Sub, #d9d9d9);
+}
+
+.info-input {
+  display: flex;
+  width: 22.5625rem;
+  height: 11.2245rem;
+  padding: 1rem 0.625rem;
+  justify-content: center;
+  align-items: center;
+  gap: 0.625rem;
+  flex-shrink: 0;
+  border-radius: 0.3125rem;
+  border: 1px solid var(--Sub, #d9d9d9);
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.sideProjectPost__btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 23.25rem;
+  height: 2.5625rem;
+  flex-shrink: 0;
+  border-radius: 0.625rem;
+  background: #02ff70;
+  color: #000;
+  font-family: Amiko;
+  font-size: 1.0625rem;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 1.3125rem; /* 123.529% */
+  letter-spacing: -0.05625rem;
+  margin-top: 7.5rem;
+  margin-bottom: 0.62rem;
+  margin-left: auto;
+  margin-right: auto;
+}

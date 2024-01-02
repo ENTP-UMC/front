@@ -13,6 +13,10 @@ import LoginStep1 from "./components/Login/LoginStep1";
 import LoginStep2 from "./components/Login/LoginStep2";
 import LoginStep3 from "./components/Login/LoginStep3";
 import LoginStep4 from "./components/Login/LoginStep4";
+import Mypage2 from "./components/Mypage/Mypage2";
+import Mypage3 from "./components/Mypage/Mypage3";
+import Diary from "./pages/Diary";
+import SideProjectPost from "./pages/SideProjectPost";
 import ClubCreate from "./components/Thunder/ClubCreate";
 
 function App() {
@@ -29,7 +33,12 @@ function App() {
               <Route path="/login/3" element={<LoginStep3 />} />
               <Route path="/login/4" element={<LoginStep4 />} />
               <Route path="/mypage" element={<Mypage />} />
+              <Route path="/mypage/2" element={<Mypage2 />} />
+              <Route path="/mypage/3" element={<Mypage3 />} />
+              <Route path="/diary" element={<Diary />} />
+
               <Route path="/sideproject" element={<SideProject />} />
+              <Route path="/sideprojectPost" element={<SideProjectPost />} />
               <Route path="/study" element={<Study />} />
               <Route path="/thunder" element={<Thunder />} />
               <Route path="/ClubCreate" element={<ClubCreate />} />
