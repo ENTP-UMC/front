@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import styled from "styled-components";
 import Header from "../components/Header/Header";
 import { Nav } from 'react-bootstrap';
+import myImage from '../../assets/img/thunderblock.png';
 
 const ThunderContainer = styled.div`
   padding-top: 4.3125rem; /* 헤더의 높이만큼 여백을 추가합니다. */
@@ -136,7 +137,10 @@ export default function Thunder() {
           </ClubItemBlock>
           </div>, 
           <div>
-            내용2
+            <img src={myImage} alt="myImage" />
+            <img src={myImage} alt="myImage" />
+            <img src={myImage} alt="myImage" />
+            <img src={myImage} alt="myImage" />
           </div>][tab]}
       
     </ThunderContainer>
