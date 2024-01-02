@@ -123,7 +123,11 @@ export default function ClubCreate() {
         onClick={() => navigate(-1)}
         style={{ border: "none", padding: 12, background: "none" }}
       >
-        <img src={goBack} alt="goBack" />
+        <img
+          src={goBack}
+          alt="goBack"
+          style={{ width: "1.25rem", height: "1.25rem" }}
+        />
       </button>
       <QuestionText>모임명</QuestionText>
       <InputContainer>
@@ -172,7 +176,7 @@ export default function ClubCreate() {
             border: "none",
           }}
         >
-          등록하기
+          등록
         </button>
       </div>
     </ClubCreateContainer>
