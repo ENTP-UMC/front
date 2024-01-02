@@ -17,13 +17,16 @@ export default function LoginMain() {
     console.log(K_REST_API_KEY);
     window.location.href = kakaoURL;
   };
+  const handleLogin = () => {
+    navigate("/login/1");
+  };
   return (
     <Div>
       <Logo>
         <Img src={loginimg} />
       </Logo>
       <SocialLogin>
-        <Login22 onClick={handleKakaoLogin} src={kakao} />
+        <Login22 onClick={handleLogin} src={kakao} />
         <Login22 src={google} />
         <Login22 src={apple} />
       </SocialLogin>

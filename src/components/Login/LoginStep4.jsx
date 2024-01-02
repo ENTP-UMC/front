@@ -34,7 +34,7 @@ const Div = styled.div`
   height: 100%;
 
   color: var(--main-2, #1a334d);
-  font-family: Pretendard;
+  font-family: "Pretendard-Regular";
   flex-direction: column;
 `;
 
@@ -45,7 +45,7 @@ const Content = styled.div`
   align-items: center;
   color: var(--main-2, #1a334d);
   text-align: center;
-  font-family: Pretendard;
+  font-family: "Pretendard-Regular";
   font-size: 20px;
   font-style: normal;
   font-weight: 600;
@@ -67,7 +67,7 @@ const Input = styled.input`
   outline: none;
   border: none;
   border-bottom: 1px solid black;
-  font-family: Pretendard;
+  font-family: "Pretendard-Regular";
   position: relative;
 `;
 const Button = styled.div`
