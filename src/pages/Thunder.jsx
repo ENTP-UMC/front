@@ -1,10 +1,11 @@
 import React, { useState } from "react";
 import styled from "styled-components";
 import Header from "../components/Header/Header";
-import { Nav } from "react-bootstrap";
-import myImage from "../assets/img/thunder.png";
-import { useNavigate } from "react-router-dom";
-import ClubCreate from "../components/Thunder/ClubCreate";
+import { Nav } from 'react-bootstrap';
+import myImage from '../assets/img/thunderblock.png';
+import { useNavigate } from 'react-router-dom';
+import ClubCreate from '../components/Thunder/ClubCreate';
+import ClubCreate2 from '../components/Thunder/ClubCreate2';
 
 const ClubData = [
   "여행",
@@ -131,6 +132,10 @@ export default function Thunder() {
   let [tab, setTab] = useState(0);
   const navigate = useNavigate();
 
+  const handleNext = ()=>{
+    navigate('/ClubCreate2')
+  }
+
   return (
     <ThunderContainer>
       <Header />
@@ -215,25 +220,15 @@ export default function Thunder() {
               </ClubItemGreen>
             </ClubItemBlock>
 
-            <ClubCreateButton onClick={() => navigate("/ClubCreate")}>
-              모임 만들기
-            </ClubCreateButton>
-          </div>,
-          <div
-            style={{
-              display: "flex",
-              flexDirection: "column",
-              paddingTop: "15px",
-              alignItems: "flex-start",
-            }}
-          >
-            <Img src={myImage} alt="myImage" />
-            <Img src={myImage} alt="myImage" />
-            <Img src={myImage} alt="myImage" />
-            <Img src={myImage} alt="myImage" />
-          </div>,
-        ][tab]
-      }
+          <ClubCreateButton onClick={()=> navigate('/ClubCreate')}>모임 만들기</ClubCreateButton>
+          </div>, 
+          <div style={{display:'flex', flexDirection: 'column', paddingTop: '15px', alignItems: 'flex-start'}} onClick={handleNext}>
+            <img  onClick={handleNext} src={myImage} style={{width: "90vw", padding: '11px'}} alt="myImage" />
+            <img src={myImage} style={{width: "90vw", padding: '11px'}} alt="myImage" />
+            <img src={myImage} style={{width: "90vw", padding: '11px'}} alt="myImage" />
+            <img src={myImage} style={{width: "90vw", padding: '11px'}} alt="myImage" />
+          </div>][tab]}
+      
     </ThunderContainer>
   );
 }
