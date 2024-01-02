@@ -1,13 +1,20 @@
 import React from "react";
 import styled from "styled-components";
 import next from "../../assets/img/next.png";
+import { useNavigate } from "react-router-dom";
 
 export default function LoginStep1() {
+  const navigate = useNavigate();
+  const handleStep1Next = () => {
+    navigate("/login/2");
+  };
+
   return (
     <Div>
       <Content>
         <Text>닉네임과 이름을 입력해주세요. </Text>
         <Input placeholder="ex.mc/유엠씨"></Input>
+        <Button onClick={handleStep1Next}>다음</Button>
       </Content>
     </Div>
   );
@@ -53,4 +60,18 @@ const Input = styled.input`
   border: none;
   border-bottom: 1px solid black;
   font-family: Pretendard;
+  position: relative;
+`;
+const Button = styled.div`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  background-color: black;
+  border-radius: 50px;
+  padding: 8px 12px;
+  justify-content: center;
+  align-items: center;
+  margin-top: 30px;
+  margin-left: 60%;
 `;
