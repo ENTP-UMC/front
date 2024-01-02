@@ -9,9 +9,9 @@ export default function SideProject() {
   const [sortBy, setSortBy] = useState("latest"); // 최신순 기본값으로 설정
 
   const tagContents = [
-    ["태그1", "태그2", "태그3"],
-    ["태그4", "태그5", "태그6"],
-    ["태그7", "태그8", "태그9"],
+    ["기획", "프론트", "백", "디자인"],
+    ["Web", "iOS", "Android"],
+    ["Spring", "Node.js"],
     // ... 다른 태그들에 해당하는 배열
   ];
 
@@ -19,32 +19,29 @@ export default function SideProject() {
     {
       id: 1,
       nickname: "닉네임",
-      title: "글 1",
+      title: "공유 일기장 사이드 프로젝트 팀원 모집",
       date: "2022-01-01",
-      stack: "모집 파트 : IOS, 서버(Spring)",
-      period: "예상 기간 : 3개월",
+      stack: "총 모집 인원 : 5",
       scrapCount: 10,
-      tag: ["태그1", "태그2", "태그3"],
+      tag: ["iOS", "Spring", "디자인"],
     },
     {
       id: 2,
       nickname: "닉네임",
-      title: "글 2",
+      title: "공유 일기장 사이드 프로젝트 팀원 모집",
       date: "2022-01-05",
-      stack: "모집 파트 : IOS, 서버(Spring)",
-      period: "예상 기간 : 3개월",
+      stack: "총 모집 인원 : 5",
       scrapCount: 5,
-      tag: ["태그1", "태그2", "태그3"],
+      tag: ["iOS", "Spring", "디자인"],
     },
     {
       id: 3,
       nickname: "닉네임",
-      title: "글 3",
+      title: "공유 일기장 사이드 프로젝트 팀원 모집",
       date: "2022-01-03",
-      stack: "모집 파트 : IOS, 서버(Spring)",
-      period: "예상 기간 : 3개월",
+      stack: "총 모집 인원 : 5",
       scrapCount: 15,
-      tag: ["태그1", "태그2", "태그3"],
+      tag: ["iOS", "Spring", "디자인"],
     },
     // ... 다른 글들
   ];
@@ -141,6 +138,7 @@ export default function SideProject() {
       <div className="sideProject-list">
         {sortedPosts().map((post) => (
           <Link
+            to={`/step4`}
             className="sideProject-list__item"
             key={post.id}
             style={{ textDecoration: "none" }}
@@ -160,8 +158,6 @@ export default function SideProject() {
             </div>
 
             <div className="item-stack">{post.stack}</div>
-
-            <div className="item-period">{post.period}</div>
 
             <div className="item-etc">
               <div className="item-tag">

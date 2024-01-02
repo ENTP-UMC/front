@@ -1,7 +1,10 @@
 import React, { useState } from "react";
+import { useNavigate } from "react-router-dom";
 import "../style/SideProjectPost.css";
+import { IMAGES } from "../constants/images";
 
 export default function SideProjectPost() {
+  const navigate = useNavigate();
   const [plan, setPlan] = useState(0);
   const [front, setFront] = useState(0);
   const [back, setBack] = useState(0);
@@ -26,6 +29,13 @@ export default function SideProjectPost() {
 
   return (
     <div className="sideProjectPost">
+      <img
+        onClick={() => navigate(-1)}
+        className="back"
+        src={IMAGES.goback}
+        alt="back"
+      />
+
       <div className="sideProjectPost__title">제목</div>
       <input
         className="title-input"
