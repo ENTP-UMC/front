@@ -185,6 +185,10 @@ export default function SideProject() {
           </Link>
         ))}
       </div>
+
+      <Link to="/sideprojectPost" className="post">
+        <img src={IMAGES.post} alt="post" />
+      </Link>
     </div>
   );
 }

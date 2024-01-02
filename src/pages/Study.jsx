@@ -187,6 +187,10 @@ export default function Study() {
           </Link>
         ))}
       </div>
+
+      <Link to="/studyPost" className="post">
+        <img src={IMAGES.post} alt="post" />
+      </Link>
     </div>
   );
 }

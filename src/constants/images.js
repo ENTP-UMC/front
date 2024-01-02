@@ -8,4 +8,5 @@ export const IMAGES = {
   scrap_before: require("../assets/img/scrap-before.png"),
   scrap_after: require("../assets/img/scrap-after.png"),
   goback: require("../assets/img/goback.png"),
+  post: require("../assets/img/post.png"),
 };
