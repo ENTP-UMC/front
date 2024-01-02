@@ -6,7 +6,7 @@ import { useNavigate } from "react-router-dom";
 export default function LoginStep3() {
   const navigate = useNavigate();
   const handleStep1Next = () => {
-    navigate("/login/4");
+    navigate("/");
   };
 
   return (

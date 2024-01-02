@@ -12,8 +12,8 @@ export default function LoginStep1() {
   return (
     <Div>
       <Content>
-        <Text>닉네임과 이름을 입력해주세요. </Text>
-        <Input placeholder="ex.mc/유엠씨"></Input>
+        <Text>닉네임을 입력해주세요. </Text>
+        <Input placeholder="ex.엠씨유"></Input>
         <Button onClick={handleStep1Next}>다음</Button>
       </Content>
     </Div>
