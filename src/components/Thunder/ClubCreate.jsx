@@ -146,7 +146,7 @@ export default function ClubCreate() {
                 <Input type="text" placeholder="오픈채팅 링크를 붙여넣어주세요." />
             </InputContainer>
 
-            <button onClick={()=>navigate('/Thunder')} style={{width: '372px', height: '41px', background: '#02FF70', borderRadius: 10}}>
+            <button onClick={()=>navigate('/Thunder')} style={{width: '372px', height: '41px', background: '#02FF70', borderRadius: 10, position: 'fixed', bottom: 0}}>
                 등록하기
             </button>
 
