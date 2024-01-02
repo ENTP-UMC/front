@@ -4,7 +4,7 @@ import Header from "../components/Header/Header";
 import { Nav } from 'react-bootstrap';
 import myImage from '../assets/img/thunderblock.png';
 import { useNavigate } from 'react-router-dom';
-import ClubCreate from '../components/Thunder/ClubCreate.jsx';
+import ClubCreate from '../components/Thunder/ClubCreate';
 
 const ClubData = ['여행', '동네친구', '반려동물', '봉사활동', '음식', '운동', '코딩', '음악', '문화/예술', '게임'];
 
@@ -52,7 +52,7 @@ const TagText = styled.div`
   font-family: 'Pretendard-Regular';
   font-weight: 500;
   word-wrap: break-word;
-`
+`;
 
 
 const ClubItemBlack = styled.div`
