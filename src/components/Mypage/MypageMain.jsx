@@ -15,6 +15,9 @@ export default function MypageMain() {
   const handlenavigate3 = () => {
     navigate("/mypage/3");
   };
+  const handlediary = () => {
+    navigate("/diary");
+  };
   return (
     <div>
       <Header>
@@ -34,7 +37,7 @@ export default function MypageMain() {
       <HotContainer>
         <Title>사이드 프로젝트</Title>
         <StudyContainer>
-          <Study>
+          <Study onClick={handlediary}>
             <StudyText1>Our 다이어리</StudyText1>
             <StudyText2>
               공유 일기장

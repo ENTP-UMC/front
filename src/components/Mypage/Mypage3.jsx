@@ -18,7 +18,7 @@ export default function Mypage3() {
     navigate("/mypage/3");
   };
 
-  const [activeButton, setActiveButton] = useState("");
+  const [activeButton, setActiveButton] = useState("button1");
 
   const handleButtonClick = (buttonId) => {
     setActiveButton(buttonId);
