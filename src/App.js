@@ -9,6 +9,10 @@ import Mypage from "./pages/Mypage";
 import SideProject from "./pages/SideProject";
 import Study from "./pages/Study";
 import Thunder from "./pages/Thunder";
+import LoginStep1 from "./components/Login/LoginStep1";
+import LoginStep2 from "./components/Login/LoginStep2";
+import LoginStep3 from "./components/Login/LoginStep3";
+import LoginStep4 from "./components/Login/LoginStep4";
 
 function App() {
   return (
@@ -19,6 +23,10 @@ function App() {
             <Routes>
               <Route path="/" element={<Home />} />
               <Route path="/login" element={<Login />} />
+              <Route path="/login/1" element={<LoginStep1 />} />
+              <Route path="/login/2" element={<LoginStep2 />} />
+              <Route path="/login/3" element={<LoginStep3 />} />
+              <Route path="/login/4" element={<LoginStep4 />} />
               <Route path="/mypage" element={<Mypage />} />
               <Route path="/sideproject" element={<SideProject />} />
               <Route path="/study" element={<Study />} />
