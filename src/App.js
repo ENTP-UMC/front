@@ -16,6 +16,8 @@ import LoginStep4 from "./components/Login/LoginStep4";
 import Mypage2 from "./components/Mypage/Mypage2";
 import Mypage3 from "./components/Mypage/Mypage3";
 import Diary from "./pages/Diary";
+import Step4 from "./components/SideProject/Step4";
+import Step5 from "./components/SideProject/Step5";
 
 function App() {
   return (
@@ -34,6 +36,8 @@ function App() {
               <Route path="/mypage/2" element={<Mypage2 />} />
               <Route path="/mypage/3" element={<Mypage3 />} />
               <Route path="/diary" element={<Diary />} />
+              <Route path="/step4" element={<Step4 />} />
+              <Route path="/step5" element={<Step5 />} />
 
               <Route path="/sideproject" element={<SideProject />} />
               <Route path="/study" element={<Study />} />
