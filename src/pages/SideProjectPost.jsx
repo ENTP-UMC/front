@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
+import { Link } from "react-router-dom";
 import "../style/SideProjectPost.css";
 import { IMAGES } from "../constants/images";
 
@@ -126,7 +127,9 @@ export default function SideProjectPost() {
         placeholder="오픈채팅 링크를 붙여넣어주세요."
       />
 
-      <div className="sideProjectPost__btn">등록</div>
+      <Link to={`/step4`} style={{ textDecoration: "none" }}>
+        <div className="sideProjectPost__btn">등록</div>
+      </Link>
     </div>
   );
 }

@@ -25,6 +25,7 @@ import Step4 from "./components/SideProject/Step4";
 import Step5 from "./components/SideProject/Step5";
 import Study4 from "./components/Study/Study4";
 import Study5 from "./components/Study/Study5";
+import StudyPost from "./pages/StudyPost";
 
 
 function App() {
@@ -52,6 +53,7 @@ function App() {
               <Route path="/sideproject" element={<SideProject />} />
               <Route path="/sideprojectPost" element={<SideProjectPost />} />
               <Route path="/study" element={<Study />} />
+              <Route path="/studyPost" element={<StudyPost />} />
               <Route path="/thunder" element={<Thunder />} />
               <Route path="/ClubCreate" element={<ClubCreate />} />
               <Route path="/ClubCreate2" element={<ClubCreate2 />} />
