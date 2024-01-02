@@ -2,6 +2,11 @@ import React, { useState } from 'react';
 import styled from "styled-components";
 import Header from "../components/Header/Header";
 import { Nav } from 'react-bootstrap';
+import myImage from '../assets/img/thunderblock.png';
+import { useNavigate } from 'react-router-dom';
+import ClubCreate from '../components/Thunder/ClubCreate';
+
+const ClubData = ['여행', '동네친구', '반려동물', '봉사활동', '음식', '운동', '코딩', '음악', '문화/예술', '게임'];
 
 const ThunderContainer = styled.div`
   padding-top: 4.3125rem; /* 헤더의 높이만큼 여백을 추가합니다. */
@@ -47,13 +52,75 @@ const TagText = styled.div`
   font-family: 'Pretendard-Regular';
   font-weight: 500;
   word-wrap: break-word;
+`;
+
+
+const ClubItemBlack = styled.div`
+  width: 170px;
+  height: 170px;
+  margin: 9px;
+  background-color: black;
+  border-radius: 6.18px;
+  position: relative;
+`;
+
+const ClubItemGreen = styled.div`
+  width: 170px;
+  height: 170px;
+  margin: 9px;
+  background-color: #02FF70;
+  border-radius: 6.18px;
+  position: relative;
+`;
+
+const ClubItemBlock = styled.div`
+  padding: 2px 17px;
+  display: flex;
+`;
+
+const ClubItemTextWhite = styled.div`
+  color: white;
+  font-size: 20;
+  font-family: 'Pretendard-Regular';
+  font-weight: 700;
+  line-height: 20;
+  word-wrap: break-word;
 `
 
-const ClubData = ['여행', '동네친구', '반려동물', '봉사활동', '음식', '운동', '코딩', '음악', '문화/예술', '게임'];
+const ClubItemTextBlack = styled.div`
+  color: black;
+  font-size: 20;
+  font-family: 'Pretendard-Regular';
+  font-weight: 700;
+  line-height: 20;
+  word-wrap: break-word;
+`
+
+const ClubCreateButton = styled.button`
+  position: fixed;
+  right: 20px;
+  bottom: 20px;
+  width: 121px;
+  height: 40px;
+  background: #BCBCBC;
+  border-radius: 30px;
+  border: 1px #EAEAEA solid;
+  font-color: black;
+  font-size: 16px;
+  font-family: 'Pretendard-Regular';
+  font-weight: 700;
+  line-height: 21px;
+  word-wrap: break-word;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+`;
 
 
 export default function Thunder() {
   let [tab, setTab] = useState(0);
+  const navigate = useNavigate();
 
   return (
     <ThunderContainer>
@@ -81,9 +148,27 @@ export default function Thunder() {
             </TagContainer>
           )}
         </OuterTagContainer>
+        <ClubItemBlock>
+            <ClubItemBlack><ClubItemTextWhite>클라이밍</ClubItemTextWhite></ClubItemBlack>
+            <ClubItemGreen><ClubItemTextBlack>배드민턴</ClubItemTextBlack></ClubItemGreen>
+          </ClubItemBlock>
+          <ClubItemBlock>
+            <ClubItemGreen><ClubItemTextBlack>클라이밍</ClubItemTextBlack></ClubItemGreen>
+            <ClubItemBlack><ClubItemTextWhite>배드민턴</ClubItemTextWhite></ClubItemBlack>
+          </ClubItemBlock>
+          <ClubItemBlock>
+            <ClubItemBlack><ClubItemTextWhite>클라이밍</ClubItemTextWhite></ClubItemBlack>
+            <ClubItemGreen><ClubItemTextBlack>배드민턴</ClubItemTextBlack></ClubItemGreen>
+          </ClubItemBlock>
 
-          </div>, <div>내용1</div>][tab]}
-
+          <ClubCreateButton onClick={()=> navigate('/ClubCreate')}>모임 만들기</ClubCreateButton>
+          </div>, 
+          <div>
+            <img src={myImage} style={{padding:11}} alt="myImage" />
+            <img src={myImage} style={{padding:11}} alt="myImage" />
+            <img src={myImage} style={{padding:11}} alt="myImage" />
+            <img src={myImage} style={{padding:11}} alt="myImage" />
+          </div>][tab]}
       
     </ThunderContainer>
   );
